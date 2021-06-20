@@ -31,7 +31,7 @@ class EnseignantController extends Controller
         $request->validate([
             'title'=>'required',
             'cours'=>'required',
-            'cle'=>'required',
+            'key'=>'required',
 
            
         ]);
@@ -41,7 +41,7 @@ class EnseignantController extends Controller
             'maincours'	=> $request->cours,
             'enseignant_id'=> Auth::user()->id,
             'nameofteacher'=>Auth::user()->name,
-            'cle'=>$request->cle,
+            'key'=>$request->key,
 
 
         ]);
@@ -115,7 +115,7 @@ public function addpdfcour(Request $request)
      $request->validate([
                 'title' => 'required',
                 'pdf' => 'required',
-                'cle'=>'required',
+                'key'=>'required',
             ]);
     
   
@@ -126,7 +126,7 @@ public function addpdfcour(Request $request)
             'titredecours'=> $request->title,
             'enseignant_id'=> Auth::user()->id,
             'nameofteacher'=>Auth::user()->name,
-            'cle'=>$request->cle,
+            'key'=>$request->key,
 
 
         ]);
@@ -137,7 +137,7 @@ public function addpdfcour(Request $request)
 }
 public function showpdfcours()
 {
-  $record = Cours::get()->where('document','!=','')->where('cle','==',Auth::user()->cle);
+  $record = Cours::get()->where('document','!=','')->where('key','==',Auth::user()->key);
 
 return view ('showpdfcours',compact('record'));
 
@@ -156,7 +156,7 @@ return view ('showpdfcours',compact('record'));
     }
     public function showstudentcour()
     {
-        $record = Cours::get()->where('document','==','')->where('cle','==',Auth::user()->cle);
+        $record = Cours::get()->where('document','==','')->where('key','==',Auth::user()->key);
      
         return view ('showstudentcours',compact('record'));
 

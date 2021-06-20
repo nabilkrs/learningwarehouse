@@ -70,10 +70,10 @@ class RegisterController extends Controller
         $spec="Null";
         if (isset($data['spec'])==true)
         $spec=$data['spec'];
-        if (isset($data['cle'])==false)
+        if (isset($data['key'])==false)
         $key="Null";
-        if (isset($data['cle'])==true)
-        $key=$data['cle'];
+        if (isset($data['key'])==true)
+        $key=$data['key'];
         if (isset($data['photo'])==false)
         $fileName="Unknown.jpg";
         else
@@ -89,7 +89,7 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
             'spec'=>$spec,
             'type'=>$data['option'],
-            'cle'=>$key,
+            'key'=>$key,
 
         ]);
     }

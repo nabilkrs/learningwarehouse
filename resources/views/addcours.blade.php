@@ -41,12 +41,12 @@
 
 
                         <div class="form-group row">
-                            <label for="cle" class="col-md-4 col-form-label text-md-right"><strong>{{ __('Class Key :') }}</strong></label>
+                            <label for="key" class="col-md-4 col-form-label text-md-right"><strong>{{ __('Class Key :') }}</strong></label>
 
                             <div class="col-md-6">
-                                <input id="cle" type="text" class="form-control @error('cle') is-invalid @enderror" name="cle" value="{{ old('email') }}" autocomplete="cle">
+                                <input id="key" type="text" class="form-control @error('key') is-invalid @enderror" name="key" value="{{ old('email') }}" autocomplete="key">
 
-                                @error('cle')
+                                @error('key')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

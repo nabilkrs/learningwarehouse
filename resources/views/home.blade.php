@@ -105,9 +105,9 @@
   cursor: pointer;
   background-color: white; 
   color: black; 
-  border: 2px solid #008CBA;
+  border: 2px solid #FF4B2B;
   width:100%;
-                    " onmouseover="this.style.background='#008CBA';this.style.color='white'" onmouseout="this.style.background='';this.style.color='black'" >Show Normal Cours</button></a>
+                    " onmouseover="this.style.background='#FF4B2B';this.style.color='white'" onmouseout="this.style.background='';this.style.color='black'" >Show Normal Cours</button></a>
 <a  href="{{route('showpdfcours')}}"  ><button style="
                      background-color: #4CAF50; /* Green */
   border: none;
@@ -123,9 +123,9 @@
   cursor: pointer;
   background-color: white; 
   color: black; 
-  border: 2px solid #008CBA;
+  border: 2px solid #FF4B2B;
   width:100%;
-                    " onmouseover="this.style.background='#008CBA';this.style.color='white'" onmouseout="this.style.background='';this.style.color='black'" >Show PDF Cours</button></a>      
+                    " onmouseover="this.style.background='#FF4B2B';this.style.color='white'" onmouseout="this.style.background='';this.style.color='black'" >Show PDF Cours</button></a>      
                     @else
                      <a href="{{route('addcours')}}"   ><button style="
                      background-color: #4CAF50; /* Green */

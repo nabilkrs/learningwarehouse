@@ -20,6 +20,7 @@ class CreateCoursTable extends Migration
             $table->string('maincours');
             $table->integer('enseignant_id');
             $table->string('nameofteacher');
+            $table->string('key');
             $table->timestamps();
         });
     }

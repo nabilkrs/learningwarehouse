@@ -21,9 +21,10 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav  class="navbar navbar-expand-md navbar-light" style="background-color: #FF4B2B;">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+            <a class="navbar-brand" href="#" style="color:white">Learning Warehouse</a>
+                <a style="color:white" class="navbar-brand" href="{{ url('/') }}">
                    
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -41,49 +42,49 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a style="color:white" class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a style="color:white" class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
                         @if (Auth::user()->type=='Enseignant')
                         <li class="nav-item">
-                                <a class="nav-link" href="{{route('addcours')}}">{{ __('ADD Normal Cours') }}</a>
+                                <a style="color:white" class="nav-link" href="{{route('addcours')}}">{{ __('ADD Normal Cours') }}</a>
                             </li>
                             
                             <li class="nav-item">
-                                <a class="nav-link" href="{{route('showcours')}}">{{ __('Show My All Courses') }}</a>
+                                <a style="color:white" class="nav-link" href="{{route('showcours')}}">{{ __('Show My All Courses') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/addpdfcours">{{ __('ADD PDF Cours') }}</a>
+                                <a style="color:white" class="nav-link" href="/addpdfcours">{{ __('ADD PDF Cours') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/showmypdfcours">{{ __('Show My PDF Courses') }}</a>
+                                <a style="color:white" class="nav-link" href="/showmypdfcours">{{ __('Show My PDF Courses') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/home">{{ __('Home') }}</a>
+                                <a style="color:white" class="nav-link" href="/home">{{ __('Home') }}</a>
                             </li>
 
 
 
                             @else
                             <li class="nav-item">
-                                <a class="nav-link"  href="{{route('showstcours')}}">{{ __('Show Normal Courses') }}</a>
+                                <a style="color:white" class="nav-link"  href="{{route('showstcours')}}">{{ __('Show Normal Courses') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{route('showpdfcours')}}">{{ __('Show PDF Courses') }}</a>
+                                <a style="color:white" class="nav-link" href="{{route('showpdfcours')}}">{{ __('Show PDF Courses') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/home">{{ __('Home') }}</a>
+                                <a style="color:white" class="nav-link" href="/home">{{ __('Home') }}</a>
                             </li>
                             @endif
 
 
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a style="color:white" id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 

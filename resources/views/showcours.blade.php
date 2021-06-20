@@ -36,7 +36,7 @@
 		  <td><a href="{{url('/showonecours',$row->id)}}"><button  class="btn btn-primary btn-block">Show</button></a></td>
 
 		  @endif
-		  <td>{{$row->cle}}</td>
+		  <td>{{$row->key}}</td>
 			</tr>
 			
 			
