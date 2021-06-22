@@ -277,14 +277,14 @@ footer a {
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <strong style="color:red">{{ $message }}</strong>
                                     </span>
                                 @enderror
 
 			<input id="email" type="email" class="form-control @error('email') is-invalid @enderror" placeholder="Email" name="email" value="{{ old('email') }}" required autocomplete="email" />
             @error('email')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <strong style="color:red">{{ $message }}</strong>
                                     </span>
                                 @enderror
            <abbr title="Choose profile photo">
@@ -298,7 +298,7 @@ footer a {
 
 @error('phone')
     <span class="invalid-feedback" role="alert">
-        <strong>{{ $message }}</strong>
+        <strong style="color:red">{{ $message }}</strong>
     </span>
 @enderror
 
@@ -322,7 +322,7 @@ footer a {
    
                                 @error('class')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <strong style="color:red">{{ $message }}</strong>
                                     </span>
                                 @enderror
                                 <div id="add"></div>
@@ -350,7 +350,7 @@ footer a {
 			<input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Email"/>
             @error('email')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <strong style="color:red">{{ $message }}</strong>
                                     </span>
                                 @enderror
             
@@ -358,7 +358,7 @@ footer a {
             <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Password"/>
             @error('password')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <strong style="color:red">{{ $message }}</strong>
                                     </span>
                                 @enderror
                                 @if (Route::has('password.request'))
@@ -407,7 +407,7 @@ $(document).ready(function() {
     
    $("#ens").click(function() {
        $('#key').remove();
-          $('#add').after("<input id=\"spec\" type=\"text\" class=\"form-control @error('spec') is-invalid @enderror\" name=\"spec\" placeholder=\"Speciality\" required autocomplete=\"spec\" autofocus required> @error('spec') <span class=\"invalid-feedback\" role=\"alert\">             <strong>{{ $message }}</strong>    </span>    @enderror");
+          $('#add').after("<input id=\"spec\" type=\"text\" class=\"form-control @error('spec') is-invalid @enderror\" name=\"spec\" placeholder=\"Speciality\" required autocomplete=\"spec\" autofocus required> @error('spec') <span class=\"invalid-feedback\" role=\"alert\">             <strong style="color:red">{{ $message }}</strong>    </span>    @enderror");
        
 
 
@@ -415,7 +415,7 @@ $(document).ready(function() {
    $("#etd").click(function() {
        
        $('#spec').remove();
-       $('#add').after("<input id=\"key\" type=\"text\" class=\"form-control @error('spec') is-invalid @enderror\" name=\"key\" placeholder=\"Class Key\"  required autocomplete=\"key\" autofocus required> @error('key') <span class=\"invalid-feedback\" role=\"alert\">             <strong>{{ $message }}</strong>    </span>    @enderror");
+       $('#add').after("<input id=\"key\" type=\"text\" class=\"form-control @error('spec') is-invalid @enderror\" name=\"key\" placeholder=\"Class Key\"  required autocomplete=\"key\" autofocus required> @error('key') <span class=\"invalid-feedback\" role=\"alert\">             <strong style="color:red">{{ $message }}</strong>    </span>    @enderror");
 
 });
 
